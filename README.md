@@ -8,7 +8,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
         - ISO 다운로드 후 설치 추천
         - SQL Server에 대한 Azure 확장 비활성화 후 진행
         
-        ![기능선택]()
+        ![기능선택](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db001.png)
 
         - 데이터베이스 엔진 구성부터 중요
             - Windows 인증 모드로 하면 외부에서 접근 불가
@@ -65,20 +65,20 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
 - SQL 기본 학습
     - SSMS 실행
-    ![SSMS로그인]()
+    ![SSMS로그인](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db002.png)
 
 - DML 학습
     - SQL 명령어 키워드 : SELECT, INSERT, UPDATE, DELETE
     - IT개발 표현 언어 : Request, Create, Update, Delete(CRUD로 부름, CRU개발 뜻은 INSERT, UPDATE, SELECT를 할 수 있는 기능을 개발하라)
     - SELECT
         ```sql
-        SELECT [ALL | DISTINCT] 속성이름(들)
-          FROM 테이블이름(들)
-        [WHERE 검색조건(들)] 
-        [GROUP BY 속성이름(들)]
-        [HAVING 검색조건(들)]
+        SELECT [ALL | DISTINCT] 속성이름(들) 
+          FROM 테이블이름(들)  
+        [WHERE 검색조건(들)]   
+        [GROUP BY 속성이름(들)] 
+        [HAVING 검색조건(들)]  
         [ORDER BY 속성이름(들) [ASC|DESC]]
-        ```
+        ```  
     - SELECT문 학습
         - 기본, 조건검색 학습 중
 
@@ -88,6 +88,13 @@ IoT 개발자과정 SQLServer 학습 리포지토리
         - SSMS(기본)
         - VS Studio - 아무런 설치없이 개발 가능
         - VS Studio Code - SQL Server(mssql) 플러그인 설치하고 개발
-    - ServerName(HostName) - 내컴퓨터이름|내네트워크주소|127.0.0.1(LoopBack IP)|localhost(LoopBack URL)
-    - 관계 데이터 모델   
+    - ServerName(HostName) - 내컴퓨터이름|내네트워크주소|127.0.0.1(LoopBack IP)|localhost(LoopBack URL) 중에서 선호하는거 아무거나
+    - 관계 데이터 모델 
+        - 릴레이션 : 행과 열로 구성된 테이블(관계 데이터 모델에서만)
+            - 행, 튜플, 열, 속성, 스키마, 인스턴스 용어  
+        - 매핑되는 이름 테이블(실제 DB)
+            - 행, 레코드, 열, 컬럼, 컬럼이름, 데이터
+        - 차수(degree) : 속성의 개수
+        - 카디날리티(cardinality) : 튜플의 수
+
 - DML 학습
