@@ -1,31 +1,31 @@
--- ¸ðµç µµ¼­ÀÇ ÀÌ¸§°ú °¡°ÝÀ» °Ë»öÇÏ½Ã¿À
--- Ctrl + Shift + U => ´ë¹®ÀÚ, Ctrl + Shift + L => ¼Ò¹®ÀÚ
+-- ëª¨ë“  ë„ì„œì˜ ì´ë¦„ê³¼ ê°€ê²©ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
+-- Ctrl + Shift + U => ëŒ€ë¬¸ìž, Ctrl + Shift + L => ì†Œë¬¸ìž
 SELECT bookname, price
   FROM Book;
 
--- ¸ðµç µµ¼­ÀÇ °¡°Ý°ú ÀÌ¸§À» °Ë»öÇÏ½Ã¿À
+-- ëª¨ë“  ë„ì„œì˜ ê°€ê²©ê³¼ ì´ë¦„ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
 SELECT price, bookname
   FROM Book;
 
- -- ¸ðµç µµ¼­ÀÇ µµ¼­¹øÈ£, µµ¼­ÀÌ¸§, ÃâÆÇ»ç, °¡°ÝÀ» °Ë»öÇÏ½Ã¿À
+ -- ëª¨ë“  ë„ì„œì˜ ë„ì„œë²ˆí˜¸, ë„ì„œì´ë¦„, ì¶œíŒì‚¬, ê°€ê²©ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
  SELECT *
    FROM Book;
 
--- ½Ç¹«¿¡¼­´Â ¼Ó¼º, ÄÃ·³¸íÀ» ´Ù Àû´Â°Ô ÀÏ¹ÝÀû
+-- ì‹¤ë¬´ì—ì„œëŠ” ì†ì„±, ì»¬ëŸ¼ëª…ì„ ë‹¤ ì ëŠ”ê²Œ ì¼ë°˜ì 
 SELECT bookid, bookname, publisher, price
   FROM Book;
 
--- µµ¼­¿¡¼­ ÃâÆÇ»ç¸¦ °Ë»öÇÏ½Ã¿À(Áßº¹ Á¦°Å)
+-- ë„ì„œì—ì„œ ì¶œíŒì‚¬ë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤(ì¤‘ë³µ ì œê±°)
 SELECT DISTINCT publisher
   FROM Book;
 
--- Á¶°Ç °Ë»ö(Á¶°Ç ¿¬»êÀÚ »ç¿ë)
--- °¡°ÝÀÌ 20,000¿ø ¹Ì¸¸ÀÎ µµ¼­¸¦ °Ë»öÇÏ½Ã¿À.
+-- ì¡°ê±´ ê²€ìƒ‰(ì¡°ê±´ ì—°ì‚°ìž ì‚¬ìš©)
+-- ê°€ê²©ì´ 20,000ì› ë¯¸ë§Œì¸ ë„ì„œë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤.
 SELECT *
   FROM Book
  WHERE price < 20000;
 
--- °¡°ÝÀÌ 10,000¿ø ÀÌ»ó 20,000¿ø ÀÌÇÏÀÎ µµ¼­¸¦ °Ë»öÇÏ½Ã¿À.
+-- ê°€ê²©ì´ 10,000ì› ì´ìƒ 20,000ì› ì´í•˜ì¸ ë„ì„œë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤.
 SELECT *
   FROM Book
  WHERE price >= 10000 AND price <= 20000;
@@ -34,30 +34,30 @@ SELECT *
   FROM Book
  WHERE price BETWEEN 10000 AND 20000;
 
--- ÃâÆÇ»ç°¡ ±Â½ºÆ÷Ã÷¿Í ´ëÇÑ¹Ìµð¾îÀÎ µµ¼­¸¦ °Ë»öÇÏ½Ã¿À
+-- ì¶œíŒì‚¬ê°€ êµ¿ìŠ¤í¬ì¸ ì™€ ëŒ€í•œë¯¸ë””ì–´ì¸ ë„ì„œë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
 SELECT *
   FROM Book
- WHERE publisher IN ('±Â½ºÆ÷Ã÷', '´ëÇÑ¹Ìµð¾î');
+ WHERE publisher IN ('êµ¿ìŠ¤í¬ì¸ ', 'ëŒ€í•œë¯¸ë””ì–´');
 
--- Ãà±¸ÀÇ ¿ª»ç¸¦ ÃâÆÇÇÑ ÃâÆÇ»ç¸¦ °Ë»öÇÏ½Ã¿À
+-- ì¶•êµ¬ì˜ ì—­ì‚¬ë¥¼ ì¶œíŒí•œ ì¶œíŒì‚¬ë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
 SELECT bookname, publisher
   FROM Book
- WHERE bookname = 'Ãà±¸ÀÇ ¿ª»ç';
+ WHERE bookname = 'ì¶•êµ¬ì˜ ì—­ì‚¬';
 
--- µµ¼­ ÀÌ¸§¿¡ Ãà±¸°¡ Æ÷ÇÔµÈ ÃâÆÇ»ç¸¦ °Ë»öÇÏ½Ã¿À
+-- ë„ì„œ ì´ë¦„ì— ì¶•êµ¬ê°€ í¬í•¨ëœ ì¶œíŒì‚¬ë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
 SELECT bookname, publisher
   FROM Book
- WHERE bookname LIKE 'Ãà±¸%'; -- 'Ãà±¸'¶ó´Â ±ÛÀÚ·Î ½ÃÀÛÇÏ´Â 
-
-SELECT bookname, publisher
-  FROM Book
- WHERE bookname LIKE '%Ãà±¸'; -- 'Ãà±¸'¶ó´Â ±ÛÀÚ·Î ³¡³ª´Â
+ WHERE bookname LIKE 'ì¶•êµ¬%'; -- 'ì¶•êµ¬'ë¼ëŠ” ê¸€ìžë¡œ ì‹œìž‘í•˜ëŠ” 
 
 SELECT bookname, publisher
   FROM Book
- WHERE bookname LIKE '%Ãà±¸%'; -- 'Ãà±¸'¶ó´Â ±ÛÀÚ°¡ µé¾î°£ ¸ðµç Ã¥
+ WHERE bookname LIKE '%ì¶•êµ¬'; -- 'ì¶•êµ¬'ë¼ëŠ” ê¸€ìžë¡œ ëë‚˜ëŠ”
 
--- ±¸·Î ³¡³ª´Â µÎ ±ÛÀÚ ´Ü¾î·Î ½ÃÀÛµÇ´Â ÃâÆÇ»ç¸¦ °Ë»öÇÏ½Ã¿À
 SELECT bookname, publisher
   FROM Book
- WHERE bookname LIKE '_±¸%'; -- (¹«½¼ ±ÛÀÚµç ÇÑ ±ÛÀÚ°¡ µé¾î°£)±¸ ·Î ½ÃÀÛÇÏ´Â 
+ WHERE bookname LIKE '%ì¶•êµ¬%'; -- 'ì¶•êµ¬'ë¼ëŠ” ê¸€ìžê°€ ë“¤ì–´ê°„ ëª¨ë“  ì±…
+
+-- êµ¬ë¡œ ëë‚˜ëŠ” ë‘ ê¸€ìž ë‹¨ì–´ë¡œ ì‹œìž‘ë˜ëŠ” ì¶œíŒì‚¬ë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
+SELECT bookname, publisher
+  FROM Book
+ WHERE bookname LIKE '_êµ¬%'; -- (ë¬´ìŠ¨ ê¸€ìžë“  í•œ ê¸€ìžê°€ ë“¤ì–´ê°„)êµ¬ ë¡œ ì‹œìž‘í•˜ëŠ” 
