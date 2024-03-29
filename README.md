@@ -7,13 +7,15 @@ IoT 개발자과정 SQLServer 학습 리포지토리
         - 미디어 다운로드, ISO 패키지 선택해서 다운로드!
         - ISO 다운로드 후 설치 추천
         - SQL Server에 대한 Azure 확장 비활성화 후 진행
+        
+        ![기능선택]()
+
         - 데이터베이스 엔진 구성부터 중요
             - Windows 인증 모드로 하면 외부에서 접근 불가
             - 혼합모드(sa)에 대한 암호를 지정 / mssql_p@ss(8자 이상 / 대소문자구분 / 특수문자1자이상 포함)
             - 데이터루트 디렉토리는 변경 => C:\Datas
-    - 개발 툴 설치
+    - [개발 툴 설치 ](https://learn.microsoft.com/ko-kr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
         - SSMS(SQL Server Management Studio) : DB에 접근, 여러 개발 작업할 툴
-        - SSMS 설치 : https://learn.microsoft.com/ko-kr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16 한국어 버전 설치
     
 - 데이터베이스 개념
     - 통합된 데이터: 데이터를 통합하는 개념. 각자 사용하던 데이터의 중복을 최소화하여 중복으로 인한 데이터 불일치 제거
@@ -37,7 +39,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
 - DB언어
     - SQL(Structured Query Language) : 구조화된 질의 언어
-        - DDL (Data Definition Language) - 데이터베이스, 테이블, 인덱스 생성
+        - DDL (Data Definition Language) - 데이터베이스, 테이블, 인덱스 생성, CREATE, ALTER, DROP
             - CREATE : 데이터베이스 및 객체 생성
             - DROP : 데이터베이스 및 객체 삭제
             - ALTER : 기존에 존재하는 데이터베이스 객체를 변경
@@ -49,9 +51,11 @@ IoT 개발자과정 SQLServer 학습 리포지토리
             - SELECT (검색) : 데이터베이스 객체로부터 데이터 검색
                 - SELECT문은 특별히 질의어(query)라고 함
         
-        - DCL (Data Control Language) - 권한, 트랜스액션 부여/제거 기능
+        - DCL (Data Control Language) - 보안, 권한 부여/제거하는 기능. GRANT, REVOKE
             - GRANT : 데이터베이스 객체에 권한 부여
             - REVOKE : 이미 부여된 데이터베이스 객체의 권한 취소
+        
+        - TCL(Transaction Control Lang) - 트랜스액션(트랜잭션) 제어하는 기능 COMMIT, ROLLBACK. 원래는 DCL의 일부, 기능이 특이해서 TCL로 분리 
 
 - 데이터베이스의 개념적 구조
     - 외부 스키마 = 일반 사용자나 응용 프로그래머가 접근하는 계층
@@ -61,6 +65,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
 - SQL 기본 학습
     - SSMS 실행
+    ![SSMS로그인]()
 
 - DML 학습
     - SQL 명령어 키워드 : SELECT, INSERT, UPDATE, DELETE
@@ -69,11 +74,20 @@ IoT 개발자과정 SQLServer 학습 리포지토리
         ```sql
         SELECT [ALL | DISTINCT] 속성이름(들)
           FROM 테이블이름(들)
-        [WHERE 검색조건(들)]
+        [WHERE 검색조건(들)] 
         [GROUP BY 속성이름(들)]
         [HAVING 검색조건(들)]
         [ORDER BY 속성이름(들) [ASC|DESC]]
         ```
     - SELECT문 학습
         - 기본, 조건검색 학습 중
+
 ## 2일차
+- Database 학습
+    - DB 개발 시 사용할 수 있는 툴
+        - SSMS(기본)
+        - VS Studio - 아무런 설치없이 개발 가능
+        - VS Studio Code - SQL Server(mssql) 플러그인 설치하고 개발
+    - ServerName(HostName) - 내컴퓨터이름|내네트워크주소|127.0.0.1(LoopBack IP)|localhost(LoopBack URL)
+    - 관계 데이터 모델   
+- DML 학습
