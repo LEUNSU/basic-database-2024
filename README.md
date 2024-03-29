@@ -22,6 +22,6 @@ IoT 개발자과정 SQLServer 학습 리포지토리
     - SQL(Structured Query Language) : 구조화된 질의 언어
         - DDL(Data Definition Lang) - 데이터베이스, 테이블, 인덱스 생성
         - DML(Data Manipulation Lang) - 검색, 삽입, 수정, 삭제 등 기능(!)
-        - DCL(Data Control Lang) - 권한, 부여/제거 기능
+        - DCL(Data Control Lang) - 권한, 트랜스액션 부여/제거 기능
 
 ## 2일차
