@@ -267,7 +267,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
     DROP VIEW 뷰이름;
     ```
 
-    - 인덱스
+    - 인덱스 -> 모든 테이블에 클러스터형 인덱스는 하나 밖에 못 만듦. 그 외는 전부 넌클러스터형   
 
         ```sql
         -- 생성
@@ -281,7 +281,26 @@ IoT 개발자과정 SQLServer 학습 리포지토리
         -- 삭제 
         DROP INDEX 인덱스이름 ON 테이블명;
         ```
+        - SSMS에서 실행 계획을 가지고 쿼리 성능을 체크할 수 있음
 
 - 파이썬 SQL Server 연동 프로그래밍
-    - PyQT GUI 생성
-    - SQL Server 데이터 핸들링
+    - Madang DB 관리 프로그램
+        - PyQt GUI 생성
+        - SQL Server 데이터 핸들링
+            - pymssql 라이브러리 설치
+
+            ```shell
+            > pip install pymssql
+            ```
+        - DB연결 설정 - Oracle, MySQL 등은 설정이 없음. 구성관리자에서 TCP/IP로 접근을 허용하지 않으면 접속이 안됨
+            1. 시작메뉴 > 모든 앱 > Microsoft SQL Server 20xx > **SQL Server 20xx 구성관리자** 실행
+            2. SQL Server 네트워크 구성 > **MSSQL SERVER에 대한 프로토콜** 클릭
+            3. TCP/IP 프로토콜 상태 가 사용 안함(최초) > **TCP/IP** 를 더블 클릭
+            4. **프로토콜 사용 > '예'** 로 변경
+            5. IP주소 탭 > IP주소가 본인 IP인 것 > **사용 > '예'* 로 변경
+            6. 127.0.0.1로 된 주소 > **사용 > '예'** 로 변경
+            7. 적용 후 SQL Server 서비스 > SQL Server (MSSQLSERVER) 더블 클릭 후, **다시 시작** 버튼 클릭, 재시작 필요
+
+            ![구성관리자](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db005.png)
+
+- 데이터베이스 모델링
