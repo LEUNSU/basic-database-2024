@@ -1,7 +1,7 @@
 # basic-database-2024
 IoT 개발자과정 SQLServer 학습 리포지토리
 
-## 1일차
+## 1일차 (24.03.28)
 - MS SQL Server 설치 : https://www.microsoft.com/ko-kr/sql-server/sql-server-downloads 최신버전
     - DBMS 엔진 - 개발자 버전
         - 미디어 다운로드, ISO 패키지 선택해서 다운로드!
@@ -84,7 +84,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
     - SELECT문 학습
         - 기본, 조건검색 학습 중
 
-## 2일차
+## 2일차 (24.03.29)
 - Database 학습
     - DB 개발 시 사용할 수 있는 툴
         - SSMS(기본)
@@ -127,7 +127,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
             ![외부조인](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db004.png)
 
-## 3일차
+## 3일차 (24.04.01)
 - Database 학습
     - 관계 데이터 모델
         - 무결성 제약조건
@@ -201,7 +201,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
         ```
         - 외래키로 사용되는 기본키가 있으면 외래키를 사용하는 테이블을 삭제 후, 기본키의 테이블 삭제해야 함!          
 
-## 4일차
+## 4일차 (24.04.02)
 - 관계 데이터 모델
     - 관계대수 : 릴레이션에서 원하는 결과를 얻기위한 수학의 대수와 같은 연산 사용하여 기술하는 언어
     - 셀렉션, 프로젝션, 집합, 조인, 카티션 프로덕트, etc...
@@ -247,7 +247,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
         - WHERE : 다수행, 다수열 반환 (중첩 서브쿼리)
             - 비교연산, 집합연산, 한정연산, 존재연산 가능
 
-## 5일차
+## 5일차 (24.04.03)
 - SQL 고급
     - 서브쿼리 리뷰
     - 뷰 : 복잡한 쿼리로 생성되는 결과를 자주 사용하기 위해서 만드는 개체
@@ -303,4 +303,23 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
             ![구성관리자](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db005.png)
 
+## 6일차 (24.04.04)
+- 파이썬 SQL Server 연동 프로그래밍
+    - Madang DB 관리 프로그램
+        - PyQt5 + pymssql
+
+    - 문제점 : 한글 깨짐 문제
+        1. DB 테이블의 varchar(ascii) -> nvarchar(UTF-8) 변경
+        2. Python에서 pymssql로 접속할 때, Charset을 'UTF-8'로 설정
+        3. INSERT 쿼리에 한글 입력되는 컬럼은 N''을 붙여줌(유니코드로 입력하라는 뜻)
+
+    - 실행화면
+
+
+
+
+## 7일차
+- SQL고급
+    - 트랜잭션
+    
 - 데이터베이스 모델링
