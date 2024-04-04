@@ -315,8 +315,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
     - 실행화면
     
-        https://github.com/LEUNSU/basic-database-2024/assets/158007401/bfeabde8-a487-4fba-b03f-12dc01e5df77
-
+        https://github.com/LEUNSU/basic-database-2024/assets/158007401/28a23559-5fd8-4e52-a94e-b0d0cbe192ca
 
 
 ## 7일차
