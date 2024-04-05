@@ -65,7 +65,7 @@
       </rect>
      </property>
      <property name="inputMethodHints">
-      <set>Qt::ImhFormattedNumbersOnly</set>
+      <set>Qt::ImhNone</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
