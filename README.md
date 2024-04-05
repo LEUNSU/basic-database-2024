@@ -309,7 +309,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
         - PyQt5 + pymssql
 
     - 문제점 : 한글 깨짐 문제
-        1. DB 테이블의 varchar(ascii) -> nvarchar(UTF-8) 변경
+        1. DB 테이블의 varchar(ASCII) -> nvarchar(UTF-8) 변경
         2. Python에서 pymssql로 접속할 때, Charset을 'UTF-8'로 설정
         3. INSERT 쿼리에 한글 입력되는 컬럼은 N''을 붙여줌(유니코드로 입력하라는 뜻)
 
@@ -320,6 +320,21 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
 ## 7일차
 - SQL고급
-    - 트랜잭션
+    - 트랜잭션 : ALL or Nothing
+    - 트랜잭션 속성 : A(tomicity),C(onsistenct),I(olation),D(urablity)
+    - TCL에서 사용할 키워드
+        - BEGIN, TRAN[SACTION], COMMIT, ROLLBACK, SAVE
     
+    - SQL Server는 기본적으로 Auto Commit(시스템이 자동으로 트랜잭션을 건다)
+    - SSMS > 도구 > 옵션 > 쿼리 실행 > SQL Server > ANSI
+        -> SET IMPLICIT_TRANSACTIONS 체크, 프로그램 재시작
+    
+    - 트랜잭션 : 로직 처리시 다른 트랙잭션의 간섭을 받지 않기 위한 것(Lock), 중요한 데이터 수정/삭제 시 잘못된 변경을 방지하기 위한 것
+
 - 데이터베이스 모델링
+    - 설계(모델링) 순서 : 개념 설계 -> 논리 설계 -> 물리 설계
+    - 개념 모델링 : 요구사항을 받으면서 정해지지 않은 여러 개체들을 정립화하는 단계
+    - 논리 모델링 : 기본키 지정, 외래키 지정, 관계 정립, 속성들 이름 (한글) 개체를 정하는 단계
+    - 물리 모델링 : DB에 맞춰서 컬럼 이름, 컬럼 데이터타입 및 크기 지정, DB에 대한 검토로 테이블을 만들기 직전의 설계를 완성하는 단계
+
+    - ER 모델링 : ERD를 그리기위한 기본 이론
