@@ -337,4 +337,50 @@ IoT 개발자과정 SQLServer 학습 리포지토리
     - 논리 모델링 : 기본키 지정, 외래키 지정, 관계 정립, 속성들 이름 (한글) 개체를 정하는 단계
     - 물리 모델링 : DB에 맞춰서 컬럼 이름, 컬럼 데이터타입 및 크기 지정, DB에 대한 검토로 테이블을 만들기 직전의 설계를 완성하는 단계
 
-    - ER 모델링 : ERD를 그리기위한 기본 이론
+    - ER 모델링 : ERD를 그리기 위한 기본 이론
+
+        ![속성의 유형](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db009.png)
+
+        - 차수에 따른 관계 타입의 유형
+
+        ![관계 대응 수에 따른 관계 타입의 유형](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db010.png)
+
+        - IE 표기법
+
+        ![IE 표기법 예시](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db011.png)
+
+        ![IE 표기법-관계와 관계 대응 수](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db012.png)
+        
+- 인덱스 예제
+    - PK나 인덱스가 없는 상태에서 성능문제 체크
+    - 인덱스가 설정되면 성능이 어떤지 비교
+    - 더미 생성시 100만건으로 제약을 두고 시작
+
+    <!-- md 주석. ![인덱스](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db006.png) -->
+    <!-- html img태그가 이미지 사이즈 조정 -->
+    <img src = "https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db006.png" width="900">
+
+## 8일차
+- 인덱스 예제
+- 정규화
+    - DB상에서 생기는 이상현상(삽입, 삭제, 수정)이 생기지 않도록 릴레이션(테이블) 분리해서 데이터베이스 설계
+    - 이상현상이 생기는 테이블을 분리해서 해결
+    - 기본키와 함수종속성을 파악
+    - 1정규형 : 도메인이 원자값을 가짐
+    - 2정규형 : 기본키가 아닌 속성이 기본키에 완전 종속일 때(학생번호[PK] + 강좌이름 -> 성적을 결정)
+    - 3정규형 : 기본키가 아닌 속성이 기본키에 비이행적으로 종속될 때(학생번호 -> 강좌이름 -> 수강료[이행종속성])
+    - BCNF정규형 : 함수 종속성 X -> Y가 성립할 때 모든 결정자 X가 후보키(기본키가 될 수 있는 속성)이면
+    - 보통 BCNF까지 정규화를 함
+    - 4정규형(다치 종속성), 5정규형(조인 종속성, 무손실 분해) 
+
+- 실무실습(사용자, 권한...)
+    1. DB관리자(SSMS)
+        - hr데이터베이스 생성, 관계 설정
+        - hrDB를 사용할 사용자 계정을 설정, 필요한 권한 설정
+            - 추가 - sa의 비번을 잃어버리면, Window 인증으로 로그인 후
+            - SSMS > 보안 > 로그인 > sa 존재 > 속성에서 비밀번호 변경 이후 SQL Server 인증으로 sa 비밀번호 입력 후 로그인하면 됨
+            - SSMS > 보안 > 로그인 > 새 로그인 클릭
+                - 사용자계정 : hr_user, 비밀번호 : hr_p@ss!
+                - 일반 : 기본 데이터베이스 hr 선택
+                - 사용자매핑 : hr 선택, 데이터베이스 역할 멤버 : db_owner 추가 선택
+    2. HR사용자 로그인(VS Code)
