@@ -360,7 +360,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
     <!-- html img태그가 이미지 사이즈 조정 -->
     <img src = "https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db006.png" width="900">
 
-## 8일차
+## 8일차 
 - 인덱스 예제
 - 정규화
     - DB상에서 생기는 이상현상(삽입, 삭제, 수정)이 생기지 않도록 릴레이션(테이블) 분리해서 데이터베이스 설계
@@ -383,4 +383,5 @@ IoT 개발자과정 SQLServer 학습 리포지토리
                 - 사용자계정 : hr_user, 비밀번호 : hr_p@ss!
                 - 일반 : 기본 데이터베이스 hr 선택
                 - 사용자매핑 : hr 선택, 데이터베이스 역할 멤버 : db_owner 추가 선택
+                
     2. HR사용자 로그인(VS Code)
