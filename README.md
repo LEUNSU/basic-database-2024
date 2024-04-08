@@ -339,26 +339,26 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
     - ER 모델링 : ERD를 그리기 위한 기본 이론
 
-        ![속성의 유형](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db009.png)
+        ![속성의 유형](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db009.png)
 
         - 차수에 따른 관계 타입의 유형
 
-        ![관계 대응 수에 따른 관계 타입의 유형](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db010.png)
+        ![관계 대응 수에 따른 관계 타입의 유형](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db010.png)
 
         - IE 표기법
 
-        ![IE 표기법 예시](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db011.png)
+        ![IE 표기법 예시](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db011.png)
 
-        ![IE 표기법-관계와 관계 대응 수](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db012.png)
+        ![IE 표기법-관계와 관계 대응 수](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db012.png)
         
 - 인덱스 예제
     - PK나 인덱스가 없는 상태에서 성능문제 체크
     - 인덱스가 설정되면 성능이 어떤지 비교
     - 더미 생성시 100만건으로 제약을 두고 시작
 
-    <!-- md 주석. ![인덱스](https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db006.png) -->
+    <!-- md 주석. ![인덱스](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db006.png) -->
     <!-- html img태그가 이미지 사이즈 조정 -->
-    <img src = "https://github.com/LEUNSU/basic-database-2024/blob/main/images/images/db006.png" width="900">
+    <img src = "https://github.com/LEUNSU/basic-database-2024/blob/main/images/db006.png" width="900">
 
 ## 8일차 
 - 인덱스 예제
@@ -383,5 +383,5 @@ IoT 개발자과정 SQLServer 학습 리포지토리
                 - 사용자계정 : hr_user, 비밀번호 : hr_p@ss!
                 - 일반 : 기본 데이터베이스 hr 선택
                 - 사용자매핑 : hr 선택, 데이터베이스 역할 멤버 : db_owner 추가 선택
-                
+
     2. HR사용자 로그인(VS Code)
