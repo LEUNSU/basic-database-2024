@@ -109,7 +109,7 @@ SELECT DEPARTMENT_ID
  ORDER BY DEPARTMENT_ID;
 
 SELECT DEPARTMENT_ID
-     , ISNULL(JOB_ID, '--합계--') AS JOB_ID
+     , ISNULL(JOB_ID, '--합계--') AS JOB_ID -- 속성값에 NULL값이 나오면 '--합계--'로 대체 
      , COUNT(EMPLOYEE_ID) AS 'count EMPS'
      , '$' + FORMAT(SUM(SALARY), '#,#') AS 'Salary SUM'
   FROM employees

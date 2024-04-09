@@ -403,7 +403,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
 
     ![HR_ERD](https://github.com/LEUNSU/basic-database-2024/blob/main/images/db013.png)
 
-- 공부를 더 할 부분
+- 공부를 더 할 부분.
     - 트랜잭션 
     - DB보안 백업과 복원
     - 모델링 + 정규화
